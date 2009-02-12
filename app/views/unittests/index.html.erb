@@ -1,0 +1,44 @@
+<h1>Listing unittests</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Propurl</th>
+    <th>Testurl</th>
+    <th>Basehref</th>
+    <th>Framework</th>
+    <th>Hinav</th>
+    <th>Treecrumb</th>
+    <th>Titles</th>
+    <th>Sectiontitle</th>
+    <th>Backpack</th>
+    <th>Popup</th>
+    <th>Rrptlcount</th>
+  </tr>
+
+<% for unittest in @unittests %>
+  <tr>
+    <td><%=h unittest.title %></td>
+    <td><%=h unittest.description %></td>
+    <td><%=h unittest.propurl %></td>
+    <td><%=h unittest.testurl %></td>
+    <td><%=h unittest.basehref %></td>
+    <td><%=h unittest.framework %></td>
+    <td><%=h unittest.hinav %></td>
+    <td><%=h unittest.treecrumb %></td>
+    <td><%=h unittest.titles %></td>
+    <td><%=h unittest.sectiontitle %></td>
+    <td><%=h unittest.backpack %></td>
+    <td><%=h unittest.popup %></td>
+    <td><%=h unittest.rrptlcount %></td>
+    <td><%= link_to 'Show', unittest %></td>
+    <td><%= link_to 'Edit', edit_unittest_path(unittest) %></td>
+    <td><%= link_to 'Destroy', unittest, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New unittest', new_unittest_path %>

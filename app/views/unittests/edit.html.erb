@@ -1,0 +1,64 @@
+<h1>Editing unittest</h1>
+
+<% form_for(@unittest) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :propurl %><br />
+    <%= f.text_area :propurl %>
+  </p>
+  <p>
+    <%= f.label :testurl %><br />
+    <%= f.text_area :testurl %>
+  </p>
+  <p>
+    <%= f.label :basehref %><br />
+    <%= f.text_field :basehref %>
+  </p>
+  <p>
+    <%= f.label :framework %><br />
+    <%= f.text_field :framework %>
+  </p>
+  <p>
+    <%= f.label :hinav %><br />
+    <%= f.check_box :hinav %>
+  </p>
+  <p>
+    <%= f.label :treecrumb %><br />
+    <%= f.check_box :treecrumb %>
+  </p>
+  <p>
+    <%= f.label :titles %><br />
+    <%= f.check_box :titles %>
+  </p>
+  <p>
+    <%= f.label :sectiontitle %><br />
+    <%= f.check_box :sectiontitle %>
+  </p>
+  <p>
+    <%= f.label :backpack %><br />
+    <%= f.check_box :backpack %>
+  </p>
+  <p>
+    <%= f.label :popup %><br />
+    <%= f.check_box :popup %>
+  </p>
+  <p>
+    <%= f.label :rrptlcount %><br />
+    <%= f.text_field :rrptlcount %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unittest %> |
+<%= link_to 'Back', unittests_path %>
