@@ -8,4 +8,14 @@ class Unittest < ActiveRecord::Base
     url_attrs.delete("id")
     testurl + "?" + url_attrs.map{|k,v| "#{k}=#{v}"}.join("&")
   end
+  
+  def url_attributes
+    url_attrs = attributes.dup
+    url_attrs.delete("testurl")
+    url_attrs.delete("updated_at")
+    url_attrs.delete("created_at")
+    url_attrs.delete("id")
+    url_attrs.merge(:host => testurl.gsub(%|https?://|, ''))
+    return url_attrs
+  end
 end
