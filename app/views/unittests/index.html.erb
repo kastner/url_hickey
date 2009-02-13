@@ -3,7 +3,7 @@
 <div>
   <% for unittest in @unittests %>
     Hi, here is the full url for UnitTest #<%= unittest.id %>: 
-    <%= unittest.full_url %>
+    <%= full_url(unittest) %>
   <% end %>  
 </div>
 
