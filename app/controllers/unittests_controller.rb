@@ -1,4 +1,5 @@
 class UnittestsController < ApplicationController
+  in_place_edit_for :unittest, :title
   # GET /unittests
   # GET /unittests.xml
   def index
