@@ -2,8 +2,8 @@
 
 <div>
   <% for unittest in @unittests %>
-    Hi, here is the full url for UnitTest #<%= unittest.id %>: 
-    <%= full_url(unittest) %>
+    <% content_tag_for :span, unittest, :class => "in_place_editor_field" do %><%= h(unittest.title) %><% end %>
+    <%= in_place_editor(dom_id(unittest), :url => set_unittest_title_url(unittest)) %>
   <% end %>  
 </div>
 
