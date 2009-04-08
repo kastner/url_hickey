@@ -1,0 +1,26 @@
+<h1>Listing environments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Url</th>
+    <th>Uri</th>
+  </tr>
+
+<% for environment in @environments %>
+  <tr>
+    <td><%=h environment.name %></td>
+    <td><%=h environment.description %></td>
+    <td><%=h environment.url %></td>
+    <td><%=h environment.uri %></td>
+    <td><%= link_to 'Show', environment %></td>
+    <td><%= link_to 'Edit', edit_environment_path(environment) %></td>
+    <td><%= link_to 'Destroy', environment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New environment', new_environment_path %>
