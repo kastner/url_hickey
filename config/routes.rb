@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :environments
+  map.resources :environments, :has_many => :tests
 
   map.resources :unittests
   map.root :controller => "unittests"
